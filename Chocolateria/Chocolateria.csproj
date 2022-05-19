@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF0579F0-F199-4F35-ACD9-037377DE71AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chocolateria</RootNamespace>
+    <AssemblyName>Chocolateria</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arbol.cs" />
+    <Compile Include="Busqueda.cs" />
+    <Compile Include="BusquedaAmplia.cs" />
+    <Compile Include="BusquedaProfunda.cs" />
+    <Compile Include="Externos.cs" />
+    <Compile Include="frmArboles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArboles.Designer.cs">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesarroladores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesarroladores.Designer.cs">
+      <DependentUpon>frmDesarroladores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrafos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrafos.Designer.cs">
+      <DependentUpon>frmGrafos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="frmOrdenacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdenacion.Designer.cs">
+      <DependentUpon>frmOrdenacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafico.cs" />
+    <Compile Include="Interno.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmArboles.resx">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesarroladores.resx">
+      <DependentUpon>frmDesarroladores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafos.resx">
+      <DependentUpon>frmGrafos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdenacion.resx">
+      <DependentUpon>frmOrdenacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Clases\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478568411_Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478568074_minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478568016_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478568120_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Informacion_sobre_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla_principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478597226_gtk-sort-ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478597160_binary-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478597331_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla-ordenacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla-ordenamiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478568239_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1478662850_free-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1478662985_plus_add_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1478663181_arrows-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478662985_plus_add_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478662850_free-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1478567893_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479210198_Button_Power_On-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479211604_RecycleBin-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Desarrollores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wjpl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info-de-la-aplicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="avatar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bitmoji-11688322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="received_1733917253597006.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla-arboles2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boton-binario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boton-balanceado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boton-preorden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boton-inorden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="texto-eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eliminar_por_codigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_por_codigo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boton-postorden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla-grafos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pantalla-grafos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="food_in_blue-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mesa4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bitmoji1646508684.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479453290_circle_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479453296_circle_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479453459_search_binoculars_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1479506410_Redo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
